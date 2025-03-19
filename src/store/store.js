@@ -1,7 +1,7 @@
 import { createStore } from "redux";
 
 
-const reducers = (state = initialState, action) => {
+const reducers = (state , action) => {
   switch (action.type) {
     case "INCREMENT":
       return {
@@ -20,6 +20,4 @@ const initialState = {
   counter: 0, 
 };
 
-const store = createStore(reducers);
-
-export default store;
+export default createStore(reducers,initialState);
